@@ -106,6 +106,7 @@ SET(libcrnlib_SOURCES
           crnlib/crn_miniz.cpp
           crnlib/crn_jpge.cpp
           crnlib/crn_jpgd.cpp
+          crnlib/lzham_timer.cpp
           crnlib/lzma_7zBuf2.cpp
           crnlib/lzma_7zBuf.cpp
           crnlib/lzma_7zCrc.cpp
@@ -117,9 +118,11 @@ SET(libcrnlib_SOURCES
           crnlib/lzma_Bra.cpp
           crnlib/lzma_BraIA64.cpp
           crnlib/lzma_LzFind.cpp
+          crnlib/lzma_LzFindMt.cpp
           crnlib/lzma_LzmaDec.cpp
           crnlib/lzma_LzmaEnc.cpp
           crnlib/lzma_LzmaLib.cpp
+          crlib/lzma_Threads.cpp
           
         crnlib/crn_arealist.h
         crnlib/crn_assert.h
@@ -177,16 +180,24 @@ SET(libcrnlib_SOURCES
           crnlib/crn_miniz.h
           crnlib/crn_jpge.h
           crnlib/crn_jpgd.h
+          crnlib/lzham_timer.h
           crnlib/lzma_7zBuf.h
           crnlib/lzma_7zCrc.h
           crnlib/lzma_7zFile.h
+          crnlib/lzma_7zVersion.h
           crnlib/lzma_Alloc.h
           crnlib/lzma_Bcj2.h
           crnlib/lzma_Bra.h
+          crnlib/lzma_CpuArch.h
+          crnlib/lzma_LzHash.h
           crnlib/lzma_LzFind.h
+          crnlib/lzma_LzFindMt.h
           crnlib/lzma_LzmaDec.h
           crnlib/lzma_LzmaEnc.h
           crnlib/lzma_LzmaLib.h
+          crnlib/lzma_MyVersion.h
+          crnlib/lzma_Threads.h
+          crnlib/lzma_Types.h
 
           inc/crn_decomp.h
           inc/crnlib.h
