@@ -122,7 +122,7 @@ SET(libcrnlib_SOURCES
           crnlib/lzma_LzmaDec.cpp
           crnlib/lzma_LzmaEnc.cpp
           crnlib/lzma_LzmaLib.cpp
-          crlib/lzma_Threads.cpp
+          crnlib/lzma_Threads.cpp
           
         crnlib/crn_arealist.h
         crnlib/crn_assert.h
