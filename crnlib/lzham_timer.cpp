@@ -72,7 +72,7 @@ namespace lzham
 
    void lzham_timer::stop()
    {
-      LZHAM_ASSERT(m_started);
+      //LZHAM_ASSERT(m_started);
                   
       query_counter(&m_stop_time);
       
@@ -81,7 +81,7 @@ namespace lzham
 
    double lzham_timer::get_elapsed_secs() const
    {
-      LZHAM_ASSERT(m_started);
+      //LZHAM_ASSERT(m_started);
       if (!m_started)
          return 0;
       
@@ -95,7 +95,7 @@ namespace lzham
 
    timer_ticks lzham_timer::get_elapsed_us() const
    {
-      LZHAM_ASSERT(m_started);
+      //LZHAM_ASSERT(m_started);
       if (!m_started)
          return 0;
          
