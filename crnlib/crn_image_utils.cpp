@@ -284,7 +284,8 @@ namespace crnlib
          }
          else
          {
-            success = ((ext == "bmp" ? stbi_write_bmp : stbi_write_tga)(pFilename, img.get_width(), img.get_height(), num_src_chans, pSrc_img) == CRNLIB_TRUE);
+            // "stbi_write_bmp()" nor "stbi_write_tga()" exist in stb_image - v2.16
+            // success = ((ext == "bmp" ? stbi_write_bmp : stbi_write_tga)(pFilename, img.get_width(), img.get_height(), num_src_chans, pSrc_img) == CRNLIB_TRUE);
          }
          return success;
       }
