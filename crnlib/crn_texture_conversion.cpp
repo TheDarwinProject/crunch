@@ -546,8 +546,14 @@ namespace crnlib
          {
             console::message("Writing texture to file: \"%s\"", params.m_dst_filename.get_ptr());
 
-            if (!work_tex.write_to_file(params.m_dst_filename.get_ptr(), params.m_dst_file_type, NULL, NULL, NULL))
+            if (params.m_dst_stream) {
+               if (!work_tex.write_to_stream(params.m_dst_stream, params.m_dst_file_type, NULL, NULL, NULL)) {
+                  return convert_error(params, "Failed writing output stream!");
+               }
+            }
+            else if (!work_tex.write_to_file(params.m_dst_filename.get_ptr(), params.m_dst_file_type, NULL, NULL, NULL)) {
                return convert_error(params, "Failed writing output file!");
+            }
 
             if (!params.m_no_stats)
             {
