@@ -1,4 +1,4 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.14.0)
 
 PROJECT (crnlib C CXX)
 
@@ -121,7 +121,8 @@ SET(libcrnlib_SOURCES
   crnlib/lzma_LzmaDec.cpp
   crnlib/lzma_LzmaEnc.cpp
   crnlib/lzma_LzmaLib.cpp
-          
+)
+set(libcrnlib_HEADERS
   crnlib/crn_arealist.h
   crnlib/crn_assert.h
   crnlib/crn_checksum.h
@@ -193,43 +194,17 @@ SET(libcrnlib_SOURCES
   inc/crn_decomp.h
   inc/crnlib.h
   inc/dds_defs.h
-        )
-ADD_LIBRARY( crnlib ${libcrnlib_SOURCES} )
-
-
-#INCLUDE_DIRECTORIES( offline/cjson/ )
-
-#file(GLOB CJSON_CFILES offline/cjson/*.c)
-#file(GLOB CJSON_HFILES offline/cjson/*.h)
-#source_group("cJSON Files" FILES ${CJSON_CFILES} ${CJSON_HFILES})
-
-#SET(HLSLcc_SOURCES
-#        offline/toGLSLStandalone.cpp
-#        offline/timer.h
-#        offline/timer.cpp
-#        offline/hash.h
-#        offline/serializeReflection.cpp
-#        offline/serializeReflection.h
-#        ${CJSON_CFILES}
-#        ${CJSON_HFILES}
-#        )
-
-#ADD_EXECUTABLE( HLSLcc ${HLSLcc_SOURCES} )
-
-# Compile 32-bit binaries for linux
-#IF(CMAKE_HOST_UNIX)#
-#
-#    ADD_LIBRARY( libHLSLcc-i386 ${libHLSLcc_SOURCES} )
-#    ADD_EXECUTABLE( HLSLcc-i386 ${HLSLcc_SOURCES} )
-#    TARGET_LINK_LIBRARIES( HLSLcc-i386 libHLSLcc-i386)
-#    SET_TARGET_PROPERTIES(libHLSLcc-i386 PROPERTIES COMPILE_FLAGS -m32 LINK_FLAGS -m32 )
-#    SET_TARGET_PROPERTIES(HLSLcc-i386 PROPERTIES COMPILE_FLAGS -m32 LINK_FLAGS -m32 )
-#ENDIF()
+)
+ADD_LIBRARY( crnlib ${libcrnlib_SOURCES} ${libcrnlib_HEADERS})
+INSTALL(TARGETS crnlib
+        DESTINATION lib
+)
+INSTALL(DIRECTORY ${CMAKE_SOURCE_DIR}/crnlib/
+        DESTINATION include
+        FILES_MATCHING PATTERN "*.h*"
+)
 
 TARGET_LINK_LIBRARIES( crnlib )
-
-# force variables that could be defined on the cmdline
-# to be written to the cach
 
 SET( CMAKE_BUILD_TYPE "${CMAKE_BUILD_TYPE}" CACHE STRING
         "One of None Debug Release RelWithDebInfo MinSizeRel" FORCE )
