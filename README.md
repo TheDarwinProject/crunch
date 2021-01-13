@@ -1,26 +1,12 @@
 crunch/crnlib v1.04 - Advanced DXTn texture compression library
-Copyright (C) 2010-2017 Richard Geldreich, Jr., Tenacious Software, and Binomial LLC http://binomial.info 
 
-Note: Crunch was originally released with a copyright of "Richard Geldreich, Jr. and Tenacious Software LLC". 
-Tenacious Software LLC as an entity no longer exists.
-
-For bugs or support contact Binomial <info@binomial.info>.
-
-Please note that crunch is unsupported software. **Basis** is the new commercial successor 
-to crunch, which has first-class support for LZ optimized RDO texture compression, much 
-faster compression, and more GPU formats. More info is on our website 
-here: http://www.binomial.info/
-
-This software uses a modified ZLIB license, which is located in license.txt. This license is the same as zlib 
-except attribution is required either in the product's documentation or credits.
+Public Domain - Please see license.txt. 
 
 Portions of this software make use of public domain code originally
 written by Igor Pavlov (LZMA), RYG (crn_ryg_dxt*), and Sean Barrett (stb_image.c).
 
 If you use this software in a product, an acknowledgment in the product 
 documentation would be highly appreciated but is not required.
-
-Note: crunch originally used to live on Google Code: https://code.google.com/p/crunch/
 
 ## Overview
 
