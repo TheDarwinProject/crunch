@@ -1,11 +1,10 @@
 // File: crn_hash_map.cpp
-// This software is in the public domain. Please see license.txt.
+// See Copyright Notice and license at the end of inc/crnlib.h
 #include "crn_core.h"
 #include "crn_hash_map.h"
 #include "crn_rand.h"
 
-namespace crnlib
-{
+namespace crnlib {
 #if 0
    class counted_obj
    {
@@ -152,4 +151,4 @@ namespace crnlib
    }
 #endif
 
-} // namespace crnlib
+}  // namespace crnlib

@@ -1,22 +1,21 @@
 // File: crn_value.cpp
-// This software is in the public domain. Please see license.txt.
+// See Copyright Notice and license at the end of inc/crnlib.h
 #include "crn_core.h"
 #include "crn_value.h"
 
-namespace crnlib
-{
-   const char* gValueDataTypeStrings[cDTTotal + 1] =
-   {
-      "invalid",
-      "string",
-      "bool",
-      "int",
-      "uint",
-      "float",
-      "vec3f",
-      "vec3i",
+namespace crnlib {
+const char* gValueDataTypeStrings[cDTTotal + 1] =
+    {
+        "invalid",
+        "string",
+        "bool",
+        "int",
+        "uint",
+        "float",
+        "vec3f",
+        "vec3i",
 
-      NULL,
-   };
+        NULL,
+};
 
-} // namespace crnlib
+}  // namespace crnlib
