@@ -27,6 +27,7 @@
 #include <malloc.h>
 #endif
 #include <stdarg.h>
+#include <stdint.h>
 #include <new>  // needed for placement new, _msize, _expand
 
 #define CRND_RESTRICT __restrict
